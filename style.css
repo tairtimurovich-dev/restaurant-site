@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(17, 17, 17, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #f0cf62;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 7% 80px;
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.subtitle {
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero p:not(.subtitle) {
+    font-size: 20px;
+    color: #ddd;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.menu {
+    padding: 100px 7%;
+    background: #151515;
+    text-align: center;
+}
+
+.menu h2,
+.about h2,
+.booking h2,
+.contacts h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.menu-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.dish {
+    background: #202020;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+}
+
+.dish-photo {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    background: #292929;
+}
+
+.dish-info {
+    padding: 25px;
+}
+
+.dish h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.dish p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.dish strong {
+    color: #d4af37;
+    font-size: 20px;
+}
+
+.about {
+    padding: 120px 15%;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.about p:not(.subtitle) {
+    max-width: 700px;
+    margin: 15px auto;
+    color: #bbb;
+    font-size: 18px;
+}
+
+.booking {
+    padding: 100px 7%;
+    text-align: center;
+    background: #191919;
+}
+
+.booking > p:not(.subtitle) {
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.contacts-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-button {
+    padding: 14px 30px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+.contacts {
+    padding: 100px 7%;
+    text-align: center;
+}
+
+.contacts p:not(.subtitle) {
+    color: #bbb;
+    margin: 12px;
+    font-size: 18px;
+}
+
+footer {
+    padding: 40px 7%;
+    text-align: center;
+    background: #080808;
+    color: #777;
+}
+
+footer .logo {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 6% 70px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p:not(.subtitle) {
+        font-size: 17px;
+    }
+
+    .menu {
+        padding: 70px 6%;
+    }
+
+    .menu h2,
+    .about h2,
+    .booking h2,
+    .contacts h2 {
+        font-size: 36px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 80px 8%;
+    }
+
+    .contacts-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
